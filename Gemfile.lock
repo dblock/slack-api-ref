@@ -41,7 +41,7 @@ GEM
     rubyntlm (0.6.3)
     spidey (0.1.0)
       mechanize
-    webrick (1.8.1)
+    webrick (1.8.2)
     webrobots (0.1.2)
 
 PLATFORMS
