@@ -1,0 +1,4 @@
+{
+  "name": "channel_leave",
+  "desc": "A member left a channel."
+}
