@@ -1,0 +1,52 @@
+{
+  "group": "entity",
+  "name": "entity.presentDetails",
+  "deprecated": false,
+  "desc": "Provide custom flexpane behavior for Work Objects. Apps call this endpoint to send per-user flexpane metadata to the client.",
+  "args": {
+    "metadata": {
+      "required": false,
+      "desc": "URL-encoded JSON object containing flexpane metadata from the app that will be conformed to a Work Object metadata schema, keyed by entity ID.",
+      "type": "object",
+      "format": "json"
+    },
+    "trigger_id": {
+      "required": true,
+      "desc": "A reference to the original user action that initiated the request.",
+      "type": "string"
+    },
+    "user_auth_required": {
+      "required": false,
+      "example": "0",
+      "desc": "Set to true (or 1) to indicate that the user must authenticate to view full flexpane data.",
+      "type": "boolean"
+    },
+    "user_auth_url": {
+      "required": false,
+      "example": "https://example.com/onboarding?user_id=xxx",
+      "desc": "A custom URL to which users are directed for authentication if required.",
+      "type": "string"
+    },
+    "error": {
+      "required": false,
+      "desc": ""
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
+    ]
+  },
+  "errors": {
+    "invalid_metadata": "The provided `metadata` argument could not be parsed or understood.",
+    "feature_not_enabled": "temporarily gating API",
+    "invalid_app_id": "App ID is not a valid format",
+    "user_auth_url_missing": "User auth url is required if user_auth_required is true",
+    "invalid_trigger_id": "Trigger id is not valid",
+    "entity_metadata_does_not_match_trigger": "The provided entity's ID does not match the ID of the entity used to initiate the request",
+    "missing_interactivity_url": "App does not have an interactivity URL configured",
+    "missing_options_load_url": "App does not have an options load URL configured",
+    "invalid_auth": "Invalid token provided"
+  }
+}
