@@ -30,6 +30,7 @@
     ]
   },
   "errors": {
+    "channel_is_limited_access": "The user has no access to the channel. Only applicable to Salesforce limited access channels.",
     "channel_not_found": "Value passed for `channel` was invalid.",
     "missing_scope": "The calling token is not granted the necessary scopes to complete this operation."
   }

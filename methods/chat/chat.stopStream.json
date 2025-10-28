@@ -43,6 +43,7 @@
     "message_not_in_streaming_state": "The message is not in a streaming state.",
     "as_user_not_supported": "The `as_user` parameter does not function with workspace apps.",
     "channel_not_found": "Value passed for `channel` was invalid.",
+    "channel_type_not_supported": "Channel type not supported.",
     "duplicate_channel_not_found": "Channel associated with `client_msg_id` was invalid.",
     "duplicate_message_not_found": "No duplicate message exists associated with `client_msg_id`.",
     "ekm_access_denied": "Your message couldn’t be sent because your admins have disabled sending messages to this channel.",
