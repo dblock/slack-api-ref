@@ -1,0 +1,34 @@
+{
+  "group": "admin",
+  "name": "admin.users.getExpiration",
+  "deprecated": false,
+  "desc": "Fetches the expiration timestamp for a guest",
+  "args": {
+    "user": {
+      "required": true,
+      "example": "U123ABC456",
+      "desc": "The ID of the guest user to get the expiration for.",
+      "type": "user"
+    },
+    "target_team": {
+      "required": false,
+      "example": "T123ABC456",
+      "desc": "If an org token is passed in and this team is on the org, it will operate on the workspace level on the specified team. Otherwise it will operate on the org or team in context."
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true,\n    \"user\": {\n        \"id\": \"U123ABC456\",\n        \"email\": \"deactivate_user2@email.com\",\n        \"is_restricted\": false,\n        \"is_ultra_restricted\": true,\n        \"expiration_ts\": 0\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"user_not_found\"\n}"
+    ]
+  },
+  "errors": {
+    "paid_teams_only": "This feature is only accessible to paid teams",
+    "no_perms": "User does not have appropriate permissions.",
+    "team_not_found": "Team not found",
+    "user_not_found": "User not found",
+    "not_permitted": "This action is not permitted",
+    "target_team_not_on_org": "Target team specified is not on the org in context",
+    "user_is_not_guest": "The user is not a guest"
+  }
+}
