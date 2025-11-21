@@ -10,7 +10,7 @@
       "desc": "The trigger type ID for which to set the permissions."
     },
     "visibility": {
-      "required": true,
+      "required": false,
       "desc": "The function visibility.",
       "type": "enum"
     },
@@ -19,15 +19,23 @@
       "example": "['U00000001', 'U00000002', 'U00000003']",
       "desc": "List of user IDs to allow for named_entities visibility.",
       "type": "array"
+    },
+    "permissions": {
+      "required": false,
+      "desc": "",
+      "type": "object"
     }
   },
   "response": {
     "examples": []
   },
   "errors": {
+    "invalid_named_entities": "Named entities visibility requires a valid set of named entities to be specified",
+    "invalid_permission_type": "This permission type is invalid.",
+    "invalid_permission_set": "This permission set is invalid.",
+    "required_visibility": "Visibility is required on this resource.",
     "restricted_action": "This actor does not have access to the permissions on this resource.",
     "trigger_type_id_not_found": "The referenced trigger type ID does not exist.",
-    "visibility_is_not_named_entities": "The visibility should be named enitites when the user_ids, team_ids, or org_ids args are set",
-    "invalid_named_entities": "Named entities visibility requires a valid set of named entities to be specified"
+    "visibility_is_not_named_entities": "The visibility should be named entities when the user_ids, team_ids, or org_ids args are set"
   }
 }

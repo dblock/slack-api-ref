@@ -33,6 +33,7 @@
     "internal_error": "An unexpected error occurred.",
     "invalid_team_ids": "One or more team IDs provided were invalid; see the `errors` field in the response for the list of invalid team IDs.",
     "no_team_ids_given": "The `team_ids` parameter was empty.",
+    "team_limit_exceeded": "The number of teams associated with the org group would exceed the limit.",
     "usergroup_not_found": "`usergroup_id` wasn't found."
   }
 }
